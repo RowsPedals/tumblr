@@ -1,0 +1,768 @@
+:root {
+    --font-family: "favorit", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+    font-family: favorit;
+    src: url(/assets/favorit.woff2);
+}
+
+@font-face {
+    font-weight: 700;
+    font-family: favorit;
+    src: url(/assets/favorit-medium.woff2);
+}
+
+$breakpoint-sm: 640px;
+$breakpoint-lg: 990px;
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    line-height: 1;
+    margin: 0;
+    background-color: black;
+}
+
+// Will have base color pallate + a pallate change where you can customize for yourself and save as a preset with a name 
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+div {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.btn {
+    font-size: 16px;
+    padding: 6px 15px;
+    border-radius: 3px;
+
+    span {
+        padding: 6px 15px;
+    }
+}
+
+.bolded {
+    line-height: 1.333;
+    font-weight: 700;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, .13);
+}
+
+.recommended {
+    display: flex;
+
+    .xcontainer {
+        opacity: .5;
+        padding-right: 14px;
+
+        button {
+            padding: 0px 0px 0px 5px;
+        }
+    }
+
+    a {
+        min-height: 43px;
+        display: flex;
+        padding: 8px 10px;
+        flex-basis: 100%;
+        flex-grow: 1;
+        width: 100%;
+
+        .infobox {
+            display: flex;
+            vertical-align: baseline;
+            align-items: center;
+            line-height: 19.2px;
+
+            .piccontainer {
+                margin-right: 11px;
+
+                .avatar {
+
+                    //<- it has an aria label
+                    .imgbox {
+                        height: 37px;
+                        width: 37px;
+                        overflow: hidden;
+                        border-radius: 3px;
+
+                        .padding {
+                            padding-bottom: 100%;
+                        }
+                    }
+                }
+            }
+
+            .namecontainer {
+                font-size: 14px;
+
+                .flex {
+                    display: flex;
+
+                    .username {
+                        color: rgb(255, 255, 255);
+                        line-height: 21px;
+                        font-weight: 700;
+                    }
+                }
+
+                .name {
+                    &:visited {
+                        color: rgba(255, 255, 255, .65);
+                    }
+
+                    font-weight: 400;
+                    color: rgba(255, 255, 255, .65);
+                }
+            }
+        }
+    }
+
+    .followcontainer {
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 0;
+        line-height: 16px;
+
+        button {
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            padding: 0;
+            margin: 0px 14px 0px 0px;
+            text-align: center; 
+
+            span {
+                color: rgb(0, 184, 255);
+                font-weight: 700;
+                min-width: 60px;
+                line-height: 21px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .xcontainer {
+        display: flex;
+        padding-right: 14px;
+        flex-grow: 1;
+        flex-shrink: 0;
+
+        button {
+            padding-left: 5px;
+
+            span {
+                margin: 0;
+            }
+        }
+    }
+}
+
+//only showing accounts this neatly in the trending aside
+
+#base-container {
+    font-family: "Favorit", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+    background: black;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: baseline;
+    position: sticky;
+    top: 0;
+    padding: 0px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, .13);
+    height: 55px;
+    width: 100%;
+    background: black;
+    max-width: 1716px;
+    z-index: 2;
+
+    .home-wrap {
+        align-items: center;
+        line-height: 16px;
+        vertical-align: baseline;
+
+        .left {
+            display: flex;
+            flex-grow: 1;
+
+            #logo-t {
+                margin-right: 18px;
+
+                a {
+                    height: 33px;
+                    width: 20px;
+                }
+            }
+
+            .block {
+                position: relative;
+                border-radius: 3px;
+                width: 480px;
+
+                span {
+                    display: inline-block;
+                    background-color: transparent;
+                    vertical-align: top;
+                    width: 100%;
+
+                    .search {
+                        background-color: rgba(255, 255, 255, .25);
+                        color: rgba(255, 255, 255, .65);
+                        display: flex;
+                        position: relative;
+                        align-items: center;
+                        vertical-align: baseline;
+                        height: 34px;
+                        margin-top: 0;
+                        justify-content: space-between;
+                        width: 100%;
+                        border-radius: 3px;
+
+                        #search-icon {
+                            color: rgba(255, 255, 255, .65);
+                            fill: rgba(255, 255, 255, .65);
+                            margin-left: 12px;
+                            margin-right: 2px;
+                            display: flex;
+                            flex-shrink: 0;
+                            height: 34px;
+                            width: 18px;
+                            align-items: center;
+                        }
+
+                        input {
+                            &::placeholder {
+                                opacity: 100%;
+                                color: inherit;
+                            }
+
+                            background-color: rgba(0, 0, 0, 0);
+                            border-color: rgba(255, 255, 255, .65);
+                            color: inherit;
+                            border-width: 0px;
+                            border-style: none;
+                            width: 100%;
+                            padding: 5px;
+                            margin: 0px;
+                            line-height: 1.5;
+                            font-size: 16px;
+                            font-weight: 400px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        font-weight: 700;
+
+        .btn-l {
+            background: #00cf35;
+            color: black;
+            margin-right: 10px;
+        }
+
+        .btn-r {
+            background: #00b8ff;
+            color: black;
+        }
+    }
+}
+
+.popup {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    margin: 24px;
+    min-width: 532px;
+    max-width: calc(100% - 32px);
+    z-index: 100px;
+    bottom: 0;
+    align-items: center;
+    width: 532px;
+    transform: translateX(-50%);
+    font-weight: 300;
+
+    @media (min-width: $breakpoint-lg) {
+        left: calc(50% - 132px);
+    }
+
+    @media (min-width: $breakpoint-sm) {
+        margin: 24px 0;
+        min-width: 532px;
+        width: auto
+    }
+
+    .inner-popup {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        background: rgb(124, 92, 255);
+        color: rgb(255, 255, 255);
+        font-size: 18px;
+        box-shadow: 0 0 15px 0 rgb(0 0 0 / 50%);
+        padding: 16px;
+        border-radius: 6px;
+
+        .left {
+            flex: 1 1 auto;
+            margin: 8px;
+            vertical-align: baseline;
+
+            .leftText {
+                line-height: 1.5238;
+                font-size: 1.3125rem;
+                font-weight: 400px;
+                font-weight: 700;
+            }
+            .wiggle {
+                line-height: 23.994px;
+                opacity: .87;
+                width: 223.34;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-self: center;
+            margin: 0;
+            padding: 0;
+            vertical-align: baseline;
+            height: 37.99px;
+
+            .btn {
+                padding: 0;
+                display: flex;
+                align-items: center;
+                font-size: 18px;
+                font-weight: 400;
+            }
+
+            .maybebtn {
+                border: 1px solid white;
+                background: transparent;
+                color: white;
+                opacity: .87;
+            }
+
+            .signupbtn {
+                margin: 0 0 0 8px;
+                background: white;
+                color: rgb(124, 92, 255);
+                border: 1px solid rgb(124, 92, 255);
+            }
+        }
+    }
+}
+
+.container {
+display: flex;
+padding: 0px 8px;
+margin: 40px auto 0;
+margin-top: 0;
+width: 100%;
+max-width: 990px;
+line-height: 18.5px;
+
+    .main {
+        display: flex;
+        padding-right: 14px;
+        border-right: 1px solid rgba(255, 255, 255, .13);
+
+        .postcontain {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .flex {
+                display: flex;
+                flex-direction: column;
+                vertical-align: baseline;
+                width: 625px;
+                padding-top: 24px;
+                font-weight: 700;
+
+                .tabs {
+                    display: flex;
+                    border-bottom: 1px solid rgba(255, 255, 255, .13);
+                    align-items: center;
+                    justify-content: center;
+                    vertical-align: baseline;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    
+                    .flexleft {
+                        flex-basis: 100%;
+                        align-items: center;
+                        display: flex;
+                        margin-bottom: -1px;
+                        vertical-align: baseline;
+                        width: 100%;
+    
+                        .tab {
+                            &::selection {
+                                //placeholder cause idrk what 2 do
+                                color: blue;
+                                border-bottom: 2px solid blue;
+                            }
+                            text-align: center;
+                            padding: 14px 8px;
+                            vertical-align: baseline;
+                            font-size: 14px;
+                            font-weight: 700;
+                        }
+    
+                        .more {
+                            button {
+                                padding: 0;
+                                background-color: rgba(0, 0, 0, 0);
+                                border-color: rgba(0, 0, 0, 0);
+                                color: white;
+                                
+                                .flexspan {
+                                    display: flex;
+                                    cursor: pointer;
+                                    align-items: center;
+                                    font-weight: 700;
+                                    font-size: 14px;
+        
+                                    .circle_icon_bg {
+                                        margin-left: 8px;
+                                        border-radius: 100%;
+                                        background-color: white;
+                                        height: 16px;
+                                        width: 16px;
+        
+                                        #caret {
+                                            padding: 4px 3px;
+                                            height: 18px;
+                                            width: 16px;
+                                            transform: rotate(90deg);
+                                            transform-origin: center, center;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    //right
+                    .preflex {
+                        align-items: center;
+                        justify-content: center;
+    
+                        .flexright {
+                            line-height: 16px;
+                            font-size: 16px;
+
+                            display: flex;
+        
+                            .masonry {
+                            
+                                svg {
+                                    width: 24px;
+                                    height: 24px;
+                                    fill: rgba(255, 255, 255, .4);
+                                }
+                            }
+        
+                            button {
+                                margin-left: 11px;
+                                border: 0;
+                                background-color: rgba(0, 0, 0, 0);
+                                height: 27px;
+                                padding: 0;
+        
+                                span {
+                                    width: 23px;
+                                    height: 23px;
+        
+                                    svg {
+                                        fill: rgb(255, 255, 255);
+                                        width: 23px;
+                                        height: 23px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
+                    .flexpost {
+                        display: flex;
+                        margin-bottom: 20px;
+                        vertical-align: baseline;
+                        border-bottom: 1px solid rgba(255, 255, 255, .13);
+                    }
+                }
+            }
+
+                // keep going + :3 + take microbreaks \\
+            main {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                max-width: 540;
+                width: 100%;
+
+                article {
+                    border-radius: 3px;
+                    margin-bottom: 20px;
+                    background-color: rgb(34,34,34);
+                    vertical-align: baseline;
+    
+                    .post {
+                        position: relative;
+
+                        .avatar-isolate {
+                            position: absolute;
+                            left: -85px; 
+                            height: 100%;
+
+                            .avatar-contain {
+                                top: 69;
+                                transition: top .25s;
+                                position: sticky;
+            
+                                a { 
+                                    
+                                    .avatar {
+                                        padding-bottom: 100%;
+                                    }
+                                }
+                            }
+                        }
+
+                        header {
+                            padding: 15px 20px 0px 15px;
+                            margin-bottom: 15px;
+                            display: flex;
+                            flex-grow: 1;
+                            align-items: center;
+                            justify-content: center;
+                            max-width: 540;
+                            width: 100%;
+    
+                            .left {
+                                font-size: 14px;
+                                font-weight: 700;
+                                line-height: 21px;
+                                margin-right: 10px;
+    
+                                .follow {
+                                    color: rgb(0, 184, 255);
+                                }
+                            }
+                            .right {
+                                
+                                span {
+                                    
+                                    svg {
+                                        fill: rgba(255, 255, 255, .65);
+                                        height: 10;
+                                        width: 18;
+                                    }
+                                }
+                            }
+                        }
+
+                        .content {
+                            span {
+                                font-family: Georgia,Times,Times New Roman,serif;
+                            }
+                        }
+                    }
+                }
+            }
+        }            
+    }
+}
+
+
+aside {
+    padding: 20px 0px 0px 15px;
+    width: 320px;
+    vertical-align: baseline;
+    box-sizing: content-box;
+    line-height: 16px;
+    font-size: 16px;
+
+    .trending {
+        vertical-align: baseline;
+        background-color: rgba(255, 255, 255, .07);
+        border-radius: 3px;
+
+        .bolded {
+            padding: 15px;
+        }
+
+        .example {
+            margin: 0;
+            padding: 10px 0px;
+            height: 236px;
+            width: 319px;
+        }
+
+        .showMoreBlogs {
+            color: rgb(0, 184, 255);
+
+            button {
+                border-top: 1px solid rgba(255, 255, 255, .13);
+                width: 100%;
+                color: inherit;
+                padding: 16px 0;
+
+                span {
+                    color: inherit;
+                    font-weight: inherit;
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .curate {
+        margin: 24px 0px;
+        padding: 16px;
+        background-color: rgb(255, 138, 0);
+        border-radius: 6px;
+        text-align: center;
+        font-size: 18px;
+
+        .bolded {
+            border: none;
+            font-size: 21px;
+            line-height: 1.5;
+        }
+
+        .faded {
+            color: white;
+            opacity: 0.87;
+            vertical-align: baseline;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        .buttonspace {
+            margin: 16px 0 0;
+
+            button {
+                border-color: rgb(255, 255, 255);
+                border-radius: 3px;
+                background: rgb(255, 255, 255);
+                color: rgb(255, 138, 0);
+                padding: 6px 15px;
+                line-height: 23.994px;
+            }
+        }
+    }
+
+    .palette {
+        border-radius: 3px;
+        margin-bottom: 16px;
+        background-color: rgba(255, 255, 255, .07);
+
+
+        .innerpalatte {
+            display: flex;
+            width: 100%;
+
+            span {
+                padding: 10px 0;
+                color: white;
+                font-size: 1.125rem;
+                line-height: 1.3;
+                font-weight: 400;
+                display: flex;
+                align-items: center;
+                vertical-align: baseline;
+
+                .svg {
+                    padding: 0 10px 0 15px;
+                    display: flex;
+                    justify-content: center;
+
+                    svg {
+                        fill: rgb(0, 184, 255);
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .sponsored {
+        position: sticky;
+        top: 69px;
+        margin-bottom: 38px;
+        line-height: 25px;
+
+        h1 {
+            border-bottom: 2px solid rgba(255, 255, 255, .13);
+            padding: 10px;
+        }
+
+        a {
+            margin: 10;
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        position: sticky;
+        top: calc(100vh - 18px - 20px);
+        line-height: 18px;
+        font-size: 12.5px;
+        margin-bottom: 20px;
+        padding: 0px 10px;
+        gap: 3px 12px;
+        vertical-align: baseline;
+
+        a {
+            color: rgb(0, 184, 255);
+        }
+    }
+}

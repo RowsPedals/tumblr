@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<!--
+       .o                                8888       8888
+      .88                                8888       8888
+    o8888oo  ooo  oooo  ooo. .oo.  .oo.   888oooo.   888  oooo d8b
+    ""888""  888  "888  "888P"Y88bP"Y88b  d88' `88b  888  "888""8P
+      888    888   888   888   888   888  888   888  888   888
+      888 .  888   888   888   888   888  888.  888  888   888
+      "888Y  `V88V"V8P' o888o o888o o888o 88`bod8P' o888o d888b
+
+                                                                        -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.scss">
+</head>
+
+<body>
+    <div id="base-container">
+
+        <header class="top">
+            <div class="home-wrap">
+                <div class="left">
+                    <svg id="logo-t" style="height: 33px; width: 20px;" viewBox="0 0 21 36.8">
+                        <a href="#">
+                            <path fill="black"
+                                d="m-1.4238-1.1035v39.006h23.939v-39.006h-23.939zm9.6016 1.1035h5.7891v9.3535h6.7578v6.8574h-6.7559v9.4844c0 2.843 1.447 3.8262 3.752 3.8262h3.2715l0.007812 7.2285h-6.1992c-5.577 0-9.7344-2.8445-9.7344-9.6465v-10.893h-5.0664v-5.9004c5.576-1.434 7.9097-6.1906 8.1777-10.311z">
+                            </path>
+                            <path fill="white"
+                                d="M21 36.75h-6.2c-5.577 0-9.733-2.844-9.733-9.646V16.21H0v-5.9C5.576 8.876 7.909 4.12 8.177 0h5.79v9.354h6.757v6.856h-6.756v9.486c0 2.843 1.448 3.826 3.753 3.826h3.271L21 36.75z">
+                            </path>
+                        </a>
+                    </svg>
+                    <div class="block">
+                        <span>
+                            <form action="search">
+                                <div class="search">
+                                    <div id="search-icon">
+                                        <svg viewBox="0 0 14 14">
+                                            <path
+                                                d="M1.676 5.7c0-2.2 1.873-4 4.042-4 2.268 0 4.043 1.8 4.043 4s-1.775 4-4.043 4c-2.169 0-4.042-1.8-4.042-4zm11.732 6.4L10.352 9c.69-.9 1.085-2.1 1.085-3.3 0-3.1-2.564-5.7-5.719-5.7C2.563 0 0 2.6 0 5.7s2.563 5.7 5.718 5.7c1.085 0 2.17-.4 3.057-.9l3.253 3.2c.197.2.493.3.789.3.296 0 .591-.1.789-.3.197-.2.394-.5.394-.8 0-.3-.296-.5-.592-.8z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <input type="search" name="search" placeholder="Search Tumblr">
+                                </div>
+                            </form>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <a href="#" class="btn-l btn">Log in</a>
+                <a href="#" class="btn-r btn">Sign up</a>
+            </div>
+        </header>
+
+        <div class="popup">
+            <div class="inner-popup">
+
+                <div class="left">
+                    <div class="leftText">It's time to try Tumblr</div>
+                    <div class="wiggle">You'll never be bored again.</div>
+                </div>
+
+                <div class="right">
+                    <button class="maybebtn btn"><span tabindex="-1">Maybe later</span></button>
+                    <button class="signupbtn btn"><span tabindex="-1">Sign me up</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="main">
+                <div class="postcontain">
+                    <div class="flex">
+                        <header class="tabs">
+                            <div class="flexleft">
+                                <a class="tab today" href="#">Today ⏰</a>
+                                <a class="tab trending" href="#">Trending 🚀</a>
+                                <a class="tab explore" href="#">Staff Picks 🌟</a>
+                                <div class="tab more">
+                                    <button tabindex="0">
+                                        <span class="flexspan">
+                                            More
+                                            <span class="circle_icon_bg"> <!-- span needed for icon rotation? --> 
+                                                <svg id="caret" viewBox="0 0 13 20.1">
+                                                    <path
+                                                        d="M0 2.9l7.2 7.2-7.1 7.1L3 20.1l7.1-7.1 2.9-2.9L2.9 0 0 2.9">
+                                                    </path>
+                                                </svg>
+                                            </span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Right -->
+                            <div class="preflex"> <!--Need this extra box for forcing the sizing to be right-->
+                                <div class="flexright">
+                                    <button class="masonry">
+                                        <span tabindex="-1">
+                                            <svg id="Masonry" viewBox="0 0 24 24">
+                                                <rect width="8" height="10" x="3" y="3" rx="1"></rect>
+                                                <rect width="8" height="6" x="13" y="3" rx="1"></rect>
+                                                <rect width="8" height="10" x="13" y="11" rx="1"></rect>
+                                                <rect width="8" height="6" x="3" y="15" rx="1"></rect>
+                                            </svg>
+                                        </span>
+                                    </button>
+
+                                    <button class="list">
+                                        <span tabindex="-1">
+                                            <svg id="List" viewBox="0 0 24 24">
+                                                <rect width="16" height="4" x="4" y="2" rx="1"></rect>
+                                                <rect width="16" height="4" x="4" y="18" rx="1"></rect>
+                                                <rect width="16" height="8" x="4" y="8" rx="1"></rect>
+                                            </svg>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </header>
+
+                        <main>
+                            <article id="a1">
+
+                                <div class="post">
+
+                                    <div class="avatar-isolate">
+                                        <div class="avatar-contain">
+                                            <a href="">
+                                                <div class="avatar">
+                                                    <img style
+                                                    ="width: 64px;
+                                                    height: 64px; border-radius: 3px;"
+                                                    src="/assets/placeholder.jpeg" alt="placeholder image">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <header>
+                                        <div class="left">
+                                            todayontumblr
+                                            <button class="follow">Follow</button>
+                                        </div>
+                                        <div class="right">
+                                            <span>
+                                                <svg viewBox="0 0 17.5 3.9">
+                                                    <path d="M17.5 1.9c0 1.1-.9 1.9-1.9 1.9-1.1 0-1.9-.9-1.9-1.9S14.5 0 15.6 0c1 0 1.9.9 1.9 1.9m-6.8 0c0 1.1-.9 1.9-1.9 1.9-1.1.1-2-.8-2-1.9 0-1 .9-1.9 2-1.9s1.9.9 1.9 1.9m-6.8 0c0 1.1-.9 2-2 2-1 0-1.9-.9-1.9-2S.9 0 1.9 0c1.1 0 2 .9 2 1.9"></path>
+                                                </svg>
+                                            </span>
+                                        </div>
+                                    </header>
+
+                                    <div class="content">
+                                        <span>Monday February 27.</span>
+                                        
+                                    </div>
+
+                                </div>
+
+                                
+                            </article>
+
+                            <div id="a2">
+
+                            </div>
+
+                        </main>
+
+                        <article style="height: 10000px;  background: linear-gradient(#FFC3A0, #FFAFBD, #C0C8FF, #96C6FF, #E0C3FC, #F8B1F1, #F9D5E5);;">
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <!-- aside -->
+            <aside>
+                <div class="trending">
+                    <div class="bolded">Trending Blogs</div>
+                    <ul class="example">
+                        <li class="account" id="A1">
+                            <div class="recommended">
+                                <a href="#">
+                                    <div class="infobox">
+                                        <div class="piccontainer">
+                                            <div class="avatar" aria-label="avatar">
+                                                <div class="imgbox">
+                                                    <div class="padding">
+                                                        <img src="/assets/avatar_mcmansionhell.jpeg"
+                                                            style="height: 37px; width: 37px;" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="namecontainer">
+                                            <div class="flex">
+                                                <span class="username">mcmansionhell</span>
+                                            </div>
+                                            <div class="name">McMansion Hell</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="followcontainer">
+                                    <button>
+                                        <span tabindex="-1">Follow</span>
+                                    </button>
+                                </div>
+                                <div class="xcontainer">
+                                    <button aria-label="dismiss reccomendation">
+                                        <span><svg style="height: 10; width:10; fill:white" id="managed-icon__close"
+                                                fill="var(--icon-color-primary, #000000)" viewBox="0 0 14 14">
+                                                <path
+                                                    d="M14 2.8L11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8l4.2 4.2 2.8-2.8L9.8 7 14 2.8z">
+                                                </path>
+                                            </svg></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account" id="A2">
+                            <div class="recommended">
+                                <a href="#">
+                                    <div class="infobox">
+                                        <div class="piccontainer">
+                                            <div class="avatar" aria-label="avatar">
+                                                <div class="imgbox">
+                                                    <div class="padding">
+                                                        <img src="/assets/avatar_purplbear.jpeg"
+                                                            style="height: 37px; width: 37px;" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="namecontainer">
+                                            <div class="flex">
+                                                <span class="username">purplbear</span>
+                                            </div>
+                                            <div class="name">Sporadic Creativity</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="followcontainer">
+                                    <button>
+                                        <span tabindex="-1">Follow</span>
+                                    </button>
+                                </div>
+                                <div class="xcontainer">
+                                    <button aria-label="dismiss reccomendation">
+                                        <span><svg style="height: 10; width:10; fill:white" id="managed-icon__close"
+                                                fill="var(--icon-color-primary, #000000)" viewBox="0 0 14 14">
+                                                <path
+                                                    d="M14 2.8L11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8l4.2 4.2 2.8-2.8L9.8 7 14 2.8z">
+                                                </path>
+                                            </svg></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account" id="A3">
+                            <div class="recommended">
+                                <a href="#">
+                                    <div class="infobox">
+                                        <div class="piccontainer">
+                                            <div class="avatar" aria-label="avatar">
+                                                <div class="imgbox">
+                                                    <div class="padding">
+                                                        <img src="/assets/avatar_elbdot.jpeg"
+                                                            style="height: 37px; width: 37px;" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="namecontainer">
+                                            <div class="flex">
+                                                <span class="username">elbdot</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="followcontainer">
+                                    <button>
+                                        <span tabindex="-1">Follow</span>
+                                    </button>
+                                </div>
+                                <div class="xcontainer">
+                                    <button aria-label="dismiss reccomendation">
+                                        <span><svg style="height: 10; width:10; fill:white" id="managed-icon__close"
+                                                fill="var(--icon-color-primary, #000000)" viewBox="0 0 14 14">
+                                                <path
+                                                    d="M14 2.8L11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8l4.2 4.2 2.8-2.8L9.8 7 14 2.8z">
+                                                </path>
+                                            </svg></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="account" id="A4">
+                            <div class="recommended">
+                                <a href="#">
+                                    <div class="infobox">
+                                        <div class="piccontainer">
+                                            <div class="avatar" aria-label="avatar">
+                                                <div class="imgbox">
+                                                    <div class="padding">
+                                                        <img src="/assets/avatar_a.jpeg"
+                                                            style="height: 37px; width: 37px;" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="namecontainer">
+                                            <div class="flex">
+                                                <span class="username">art</span>
+                                            </div>
+                                            <div class="name">art on tumblr</div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="followcontainer">
+                                    <button>
+                                        <span tabindex="-1">Follow</span>
+                                    </button>
+                                </div>
+                                <div class="xcontainer">
+                                    <button aria-label="dismiss reccomendation">
+                                        <span><svg style="height: 10; width:10; fill:white" id="managed-icon__close"
+                                                fill="var(--icon-color-primary, #000000)" viewBox="0 0 14 14">
+                                                <path
+                                                    d="M14 2.8L11.2 0 7 4.2 2.8 0 0 2.8 4.2 7 0 11.2 2.8 14 7 9.8l4.2 4.2 2.8-2.8L9.8 7 14 2.8z">
+                                                </path>
+                                            </svg></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="showMoreBlogs">
+                        <button><span>Show more blogs</span></button>
+                    </div>
+                </div>
+                <div class="curate">
+                    <div class="topwords">
+                        <div class="bolded">Curate your own Dashboard</div>
+                        <div class="faded">You'll never be bored again.</div>
+                    </div>
+                    <div class="buttonspace">
+                        <button aria-label="Sign me up 🙌"><span>Sign me up 🙌</span></button>
+                    </div>
+                </div>
+                <div class="palette">
+                    <button class="innerpalatte" type="button" aria-label="Change Palatte">
+                        <span>
+                            <div class="svg">
+                                <svg fill="var(--icon-color-primary, #ffffff)" viewBox="0 0 24 24">
+                                    <path
+                                        d="M11.933 0C5.326 0 0 5.356 0 12s5.326 12 11.933 12a2.034 2.034 0 0 0 2.022-2.034c0-.542-.202-1.017-.54-1.356-.336-.339-.471-.813-.471-1.356 0-1.085.876-2.034 2.022-2.034h2.36c3.64 0 6.674-2.983 6.674-6.712C23.933 4.814 18.54 0 11.933 0zM4.652 12a2.034 2.034 0 0 1-2.023-2.034c0-1.085.877-2.034 2.023-2.034a2.034 2.034 0 0 1 0 4.068zm3.977-5.288a2.034 2.034 0 0 1-2.022-2.034c0-1.085.876-2.034 2.022-2.034s2.023.881 2.023 2.034c0 1.085-.877 2.034-2.023 2.034zm6.674 0a2.034 2.034 0 0 1-2.022-2.034c0-1.085.876-2.034 2.022-2.034 1.079 0 2.023.881 2.023 2.034-.068 1.085-.944 2.034-2.023 2.034zM19.281 12a2.034 2.034 0 0 1-2.023-2.034c0-1.085.877-2.034 2.023-2.034 1.079 0 2.022.882 2.022 2.034C21.236 11.12 20.36 12 19.281 12z">
+                                    </path>
+                                </svg>
+                            </div>
+                            Change Palatte
+                        </span>
+                    </button>
+                </div>
+                <div class="sponsored">
+                    <h1>Sponsored</h1>
+                    <a href="#">Wanna go ad-free?</a>
+                </div>
+                <footer>
+                    <a href="about">About</a>
+                    <a href="apps">Apps</a>
+                    <a href="legal">Legal</a>
+                    <a href="privacy">Privacy</a>
+                </footer>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../script.js"></script>
