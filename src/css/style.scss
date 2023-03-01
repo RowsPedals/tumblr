@@ -572,43 +572,37 @@ line-height: 18.5px;
                             }
                         }
 
-                        header {
+                        .topper {
                             padding: 15px 20px 0px 15px;
                             margin-bottom: 15px;
-                            display: flex;
-                            flex-grow: 1;
-                            align-items: center;
-                            justify-content: center;
                             max-width: 540;
                             width: 100%;
-    
-                            .left {
-                                font-size: 14px;
-                                font-weight: 700;
-                                line-height: 21px;
-                                margin-right: 10px;
-    
-                                .follow {
-                                    color: rgb(0, 184, 255);
-                                }
+                            font-size: .875rem;
+                            font-weight: 700;
+                            line-height: 21px;
+                            margin-right: 10px;
+
+                            .follow {
+                                color: rgb(0, 184, 255);
                             }
-                            .right {
-                                
-                                span {
-                                    
-                                    svg {
-                                        fill: rgba(255, 255, 255, .65);
-                                        height: 10;
-                                        width: 18;
-                                    }
+                            
+                            span {
+                                svg {
+                                    fill: rgba(255, 255, 255, .65);
+                                    height: 10;
+                                    width: 18;
                                 }
                             }
                         }
 
                         .content {
-                            span {
-                                font-family: Georgia,Times,Times New Roman,serif;
+                            font-family: Georgia,Times,Times New Roman,serif;
+                            
+                            .date {
+                                font-size: 34px;
+                                font-weight: 400;
                             }
+
                         }
                     }
                 }
