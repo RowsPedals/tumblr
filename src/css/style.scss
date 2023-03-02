@@ -316,7 +316,7 @@ button {
     margin: 24px;
     min-width: 532px;
     max-width: calc(100% - 32px);
-    z-index: 100px;
+    z-index: 100;
     bottom: 0;
     align-items: center;
     width: 532px;
@@ -543,50 +543,54 @@ line-height: 18.5px;
                 flex-direction: column;
                 max-width: 540;
                 width: 100%;
+                position: relative;
 
                 article {
                     border-radius: 3px;
                     margin-bottom: 20px;
                     background-color: rgb(34,34,34);
                     vertical-align: baseline;
+                    position: absolute;
+                    right: -85px;
+                    left: 85px;
     
                     .post {
-                        position: relative;
 
                         .avatar-isolate {
+                            line-height: 0;
                             position: absolute;
-                            left: -85px; 
+                            left: -85px;
                             height: 100%;
 
                             .avatar-contain {
-                                top: 69;
                                 transition: top .25s;
                                 position: sticky;
-            
-                                a { 
-                                    
-                                    .avatar {
-                                        padding-bottom: 100%;
-                                    }
+
+                                .avatar {
+                                position: relative;
                                 }
                             }
                         }
 
                         .topper {
-                            padding: 15px 20px 0px 15px;
-                            margin-bottom: 15px;
                             max-width: 540;
                             width: 100%;
+                            padding: 15px 20px 0px 20px;
+                            margin-bottom: 31px;
+                            margin-right: 10px;
                             font-size: .875rem;
                             font-weight: 700;
                             line-height: 21px;
-                            margin-right: 10px;
 
                             .follow {
+                                padding-left: 7;
+                                font-weight: 700;
                                 color: rgb(0, 184, 255);
                             }
                             
                             span {
+                                margin-left: 322.5px;
+                                
                                 svg {
                                     fill: rgba(255, 255, 255, .65);
                                     height: 10;
@@ -596,13 +600,56 @@ line-height: 18.5px;
                         }
 
                         .content {
-                            font-family: Georgia,Times,Times New Roman,serif;
+                            padding: 0px 20px 0px 20px;
+                            font-weight: 400;
                             
                             .date {
+                                font-family: Georgia,Times,Times New Roman,serif;
                                 font-size: 34px;
                                 font-weight: 400;
                             }
+                            .heading {
+                                padding-top: 11px;
+                                font-size: 26px;
+                            }
+                            p {
+                                line-height: 24px;
+                            }
 
+                        }
+
+                        .tags {
+                            padding: 0px 20px 0px 20px;
+                            color: rgba(255, 255, 255, .65);
+                            font-weight: 400;
+                            .tag {
+                                padding: 5px;
+                            }
+                        }
+
+                        footer {
+                            height: 30px;
+                            fill: rgba(255, 255, 255, .65);
+                            margin: 25px 0 12px 385px;
+                            vertical-align: baseline;
+
+                            button {
+                                padding: 0;
+                                margin-left: 20px;
+                            }
+                            .share {
+                                height: 24px;
+                                width: 24px;
+                            }
+                            .repost {
+                                height: 21px;
+                                width: 21px;
+                            }
+                            .like {
+                                height: 21px;
+                                width: 23px;
+                            }
+                            
                         }
                     }
                 }
