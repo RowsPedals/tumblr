@@ -213,7 +213,6 @@ button {
 
     .home-wrap {
         align-items: center;
-        line-height: 16px;
         vertical-align: baseline;
 
         .left {
@@ -222,6 +221,7 @@ button {
 
             #logo-t {
                 margin-right: 18px;
+                margin-left: 2px;
 
                 a {
                     height: 33px;
@@ -553,8 +553,13 @@ line-height: 18.5px;
                     position: absolute;
                     right: -85px;
                     left: 85px;
+
+                    a {
+                        text-decoration: underline;
+                    }
     
                     .post {
+                        position: relative;
 
                         .avatar-isolate {
                             line-height: 0;
@@ -564,10 +569,13 @@ line-height: 18.5px;
 
                             .avatar-contain {
                                 transition: top .25s;
+                                position: -webkit-sticky;
                                 position: sticky;
+                                top: 69px;
+                                vertical-align: baseline;
 
                                 .avatar {
-                                position: relative;
+                                    position: relative;
                                 }
                             }
                         }
@@ -652,6 +660,10 @@ line-height: 18.5px;
                             
                         }
                     }
+                }
+                #A2 {
+                    position: absolute;
+                    top: 335px;
                 }
             }
         }            
