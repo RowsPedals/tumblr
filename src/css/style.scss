@@ -194,6 +194,7 @@ button {
     background: black;
     line-height: 1.5;
     font-size: 16px;
+    height: 3000px;
 }
 
 .top {
@@ -440,10 +441,8 @@ line-height: 18.5px;
                         width: 100%;
     
                         .tab {
-                            &::selection {
-                                //placeholder cause idrk what 2 do
-                                color: blue;
-                                border-bottom: 2px solid blue;
+                            &:hover {
+                                background: rgba(255, 255, 255, .13);
                             }
                             text-align: center;
                             padding: 14px 8px;
@@ -453,13 +452,16 @@ line-height: 18.5px;
                         }
                         
                         .today {
+                            &:hover {
+                                background: none;
+                            }
                             color: #00b8ff;
                             box-shadow: inset 0px -2px 0px #00b8ff;
                         }
     
                         .more {
+                            position: relative;
                             button {
-                                padding: 0;
                                 background-color: rgba(0, 0, 0, 0);
                                 border-color: rgba(0, 0, 0, 0);
                                 color: white;
@@ -484,6 +486,25 @@ line-height: 18.5px;
                                             width: 16px;
                                             transform: rotate(90deg);
                                             transform-origin: center, center;
+                                        }
+                                    }
+                                }
+                                #extras {
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    top: 56px;
+                                    left: -1px;
+                                    position: absolute;
+                                    z-index: 2;
+                                    box-shadow: 0 0 15px rgb(0 0 0 / 50%);
+
+                                    ul {
+                                        border-radius: 3px;
+                                        background-color: rgb(34,34,34);
+                                        width: 200px;
+                                        margin: 0;
+                                        li {
+                                            padding: 8.6px;
                                         }
                                     }
                                 }
@@ -541,7 +562,7 @@ line-height: 18.5px;
                 max-width: 540;
                 width: 100%;
                 position: relative;
-                height: 1500px;
+                height: 2000px;
 
                 article {
                     border-radius: 3px;
@@ -621,6 +642,11 @@ line-height: 18.5px;
                             p {
                                 line-height: 24px;
                             }
+                            img {
+                                position: absolute;
+                                left: -.5px;
+                                max-width: 540px;
+                            }
 
                         }
 
@@ -639,6 +665,12 @@ line-height: 18.5px;
                             margin: 25px 0 12px 385px;
                             vertical-align: baseline;
 
+                            span {
+                                position: absolute;
+                                left: -360;
+                                color: rgba(255, 255, 255, .65);
+                            }
+                            
                             button {
                                 padding: 0;
                                 margin-left: 20px;
@@ -667,6 +699,21 @@ line-height: 18.5px;
                 #A3 {
                     position: absolute;
                     top: 695px;
+                }
+                #A4 {
+                    position: absolute;
+                    top: 1270px;
+                    .content {
+                        height: 640px;
+                    }
+                    .tags {
+                        position: absolute;
+                        top: 625px;
+                    }
+                    footer {
+                        position: absolute;
+                        top: 645px;
+                    }
                 }
             }
         }            
