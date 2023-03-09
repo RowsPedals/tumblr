@@ -6,3 +6,5 @@ function showTheThing (){
         theThing.style.display = 'none';
     }
 }
+
+document.getElementById('more-dropdown').addEventListener('click', showTheThing);
